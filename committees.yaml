@@ -1,0 +1,1040 @@
+# CNCF org-level committees: governance bodies, their role teams and members.
+# Schema: https://github.com/cncf/automation/blob/main/utilities/dot-project/SCHEMA.md#committeesyaml
+#
+# TODO: review and verify the following.
+#
+# 1. elected_by is "unknown" for 33 entries:
+#    - toc/emeritus: 26
+#    - governing-board/members: 7
+#
+# 2. 16 handles were inferred from names (no source lists the handle).
+#    Confirm each is the right person:
+#    - toc/emeritus:
+#      - quinton-hoole
+#      - jbeda
+#      - mattklein123
+#      - xiang90
+#      - michelleN
+#      - saad-ali
+#      - sheng-liang
+#      - richih
+#      - klueska
+#    - end-user-tab:
+#      - ride808
+#    - governing-board:
+#      - denverdino
+#    - staff:
+#      - caniszczyk
+#      - DPalilonis
+#      - jroylejones-CNCF
+#      - mtspontejos
+#      - Razel0915
+#
+# 3. ~100 start/end dates are approximate. Where no date was recorded, the
+#    first appearance in the source's git history or the term length was used.
+#
+# 4. 50 people were left out because no GitHub handle was found:
+#    - TOC emeritus: 14
+#    - Governing Board members: 12
+#    - Staff: 24
+#
+# 5. project-reviews-subproject lists no chairs upstream; its leads were taken
+#    from the toc-project-reviews-subproject GitHub team.
+#
+# 6. These terms have already ended (the validator warns about them). Update
+#    the end date or move the member to an emeritus team:
+#    - mentoring-subproject/chairs: nate-double-u
+#    - project-reviews-subproject/leads: joshgav
+schema_version: "1.0.0"
+org: cncf
+committees:
+  - id: toc
+    name: Technical Oversight Committee
+    description: "Technical governing body of the CNCF; admits and oversees CNCF projects."
+    type: toc
+    url: "https://github.com/cncf/toc"
+    teams:
+      - name: members
+        github_teams: [cncf-toc, cncf-toc-voters]
+        members:
+          - github: abebars
+            name: Ahmed Bebars
+            company: The New York Times
+            elected_by: End User TAB
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: chira001
+            name: Alex Chircop
+            company: Google
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: brandtkeller
+            name: Brandt Keller
+            company: Defense Unicorns
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: chadbeaudin
+            name: Chad Beaudin
+            company: Boeing
+            elected_by: End User TAB
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: kfaseela
+            name: Faseela K
+            company: Ericsson Software Technology
+            elected_by: Governing Board
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: jeremyrickard
+            name: Jeremy Rickard
+            company: Microsoft
+            elected_by: Governing Board
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: jrsapi
+            name: Joseph Sandoval
+            company: Adobe Inc
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: angellk
+            name: Karena Angell
+            company: Red Hat
+            elected_by: Governing Board
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: kevin-wangzefeng
+            name: Kevin Wang
+            company: Huawei
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: mfahlandt
+            name: Mario Fahlandt
+            company: Kubermatic
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: salaboy
+            name: Mauricio Salatino
+            elected_by: Non-sandbox project maintainers
+            start: 2026-05-12
+            end: 2028-05-12
+      - name: alternates
+        github_teams: [cncf-toc]
+        members:
+          - github: kgamanji
+            name: Katie Gamanji
+            company: Apple
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2027-05-12
+          - github: raravena80
+            name: Ricardo Aravena
+            company: Snowflake
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2027-05-12
+      - name: chair
+        members:
+          - github: angellk
+            name: Karena Angell
+            elected_by: TOC
+            start: 2025-03-26
+            end: 2027-03-04
+      - name: vice-chair
+        members:
+          - github: kevin-wangzefeng
+            name: Kevin Wang
+            elected_by: TOC
+            start: 2025-05-14
+            end: 2028-05-12
+      - name: emeritus
+        emeritus: true
+        members:
+          - github: quinton-hoole
+            name: Quinton Hoole
+            elected_by: unknown
+            start: 2018-03-17
+            end: 2019-03-17
+          - github: jbeda
+            name: Joe Beda
+            elected_by: unknown
+            start: 2019-01-29
+            end: 2020-01-29
+          - github: kgamanji
+            name: Katie Gamanji
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2020-11-02
+          - github: kgamanji
+            name: Katie Gamanji
+            elected_by: unknown
+            start: 2022-03-18
+            end: 2026-02-04
+          - github: mattklein123
+            name: Matt Klein
+            elected_by: unknown
+            start: 2019-01-29
+            end: 2021-01-29
+          - github: xiang90
+            name: Xiang Li
+            elected_by: unknown
+            start: 2019-01-29
+            end: 2021-01-29
+          - github: michelleN
+            name: Michelle Noorali
+            elected_by: unknown
+            start: 2019-03-18
+            end: 2021-03-18
+          - github: lizrice
+            name: Liz Rice
+            elected_by: unknown
+            start: 2019-03-11
+            end: 2022-02-04
+          - github: saad-ali
+            name: Saad Ali
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2022-02-04
+          - github: sheng-liang
+            name: Sheng Liang
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2022-02-04
+          - github: alena1108
+            name: Alena Prokharchyk
+            elected_by: unknown
+            start: 2020-03-18
+            end: 2022-03-18
+          - github: erinaboyd
+            name: Erin Boyd
+            elected_by: unknown
+            start: 2021-02-01
+            end: 2023-02-01
+          - github: dims
+            name: Davanum Srinivas
+            elected_by: unknown
+            start: 2021-03-17
+            end: 2023-03-17
+          - github: dims
+            name: Davanum Srinivas
+            elected_by: unknown
+            start: 2024-02-16
+            end: 2026-05-12
+          - github: justincormack
+            name: Justin Cormack
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2024-02-04
+          - github: mattfarina
+            name: Matt Farina
+            elected_by: unknown
+            start: 2022-02-04
+            end: 2024-02-04
+          - github: richih
+            name: Richard Hartmann
+            elected_by: unknown
+            start: 2022-02-04
+            end: 2024-02-04
+          - github: erinaboyd
+            name: Erin Boyd
+            elected_by: unknown
+            start: 2023-03-18
+            end: 2024-05-01
+          - github: nikhita
+            name: Nikhita Raghunath
+            elected_by: unknown
+            start: 2023-02-01
+            end: 2025-02-01
+          - github: dzolotusky
+            name: Dave Zolotusky
+            elected_by: unknown
+            start: 2021-02-01
+            end: 2025-02-01
+          - github: cathyhongzhang
+            name: Cathy Zhang
+            elected_by: unknown
+            start: 2022-07-01
+            end: 2025-02-01
+          - github: mauilion
+            name: Duffie Cooley
+            elected_by: unknown
+            start: 2023-02-01
+            end: 2025-02-01
+          - github: TheFoxAtWork
+            name: Emily Fox
+            elected_by: unknown
+            start: 2022-02-04
+            end: 2026-05-12
+          - github: klueska
+            name: Kevin Klues
+            elected_by: unknown
+            start: 2025-03-04
+            end: 2026-09-09
+          - github: linsun
+            name: Lin Sun
+            elected_by: unknown
+            start: 2024-02-04
+            end: 2026-02-04
+          - github: rochaporto
+            name: Ricardo Rocha
+            elected_by: unknown
+            start: 2024-02-04
+            end: 2026-02-04
+  - id: tag-developer-experience
+    name: TAG Developer Experience
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-developer-experience"
+    teams:
+      - name: chairs
+        github_teams: [tag-developer-experience-chairs, tag-developer-experience-leads, cncf-tag-leads]
+        members:
+          - github: danieloh30
+            name: Daniel Oh
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: graz-dev
+            name: Graziano Casto
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: SwEngin
+            name: Mona Borham
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-developer-experience-tech-leads, tag-developer-experience-leads, cncf-tag-leads]
+        members:
+          - github: joshuabezaleel
+            name: Joshua Bezaleel Abednego
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: julsemaan
+            name: Julien Semaan
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: kdubois
+            name: Kevin Dubois
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: cloudmelon
+            name: "Mélony QIN"
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: stmcginnis
+            name: Sean McGinnis
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+      - name: liaisons
+        members:
+          - github: salaboy
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: abebars
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: jrsapi
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+  - id: tag-infrastructure
+    name: TAG Infrastructure
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-infrastructure"
+    teams:
+      - name: chairs
+        github_teams: [tag-infrastructure-chairs, tag-infrastructure-leads, cncf-tag-leads]
+        members:
+          - github: GenPage
+            name: Dylan Page
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: kashifest
+            name: Kashif Khan
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: xing-yang
+            name: Xing Yang
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+      - name: tech-leads
+        github_teams: [tag-infrastructure-tech-leads, tag-infrastructure-leads, cncf-tag-leads]
+        members:
+          - github: alexagriffith
+            name: Alexa Griffith
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: aojea
+            name: Antonio Ojea
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: joshgav
+            name: Josh Gavant
+            elected_by: TOC
+            start: 2026-09-23
+            end: 2028-07-06
+          - github: moezdil
+            name: "Mesut Özdil"
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: thschue
+            name: Thomas Schuetz
+            company: TSC Labs
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: hzxuzhonghu
+            name: Zhonghu Xu
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+      - name: liaisons
+        members:
+          - github: brandtkeller
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: kfaseela
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: chira001
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+  - id: tag-operational-resilience
+    name: TAG Operational Resilience
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-operational-resilience"
+    teams:
+      - name: chairs
+        github_teams: [tag-operational-resilience-chairs, tag-operational-resilience-leads, cncf-tag-leads]
+        members:
+          - github: alolita
+            name: Alolita Sharma
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: krol3
+            name: Carol Valencia
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: saiyam1814
+            name: Saiyam Pathak
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-operational-resilience-tech-leads, tag-operational-resilience-leads, cncf-tag-leads]
+        members:
+          - github: chadmcrowell
+            name: Chad Crowell
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: didiViking
+            name: Diana Todea
+            company: VictoriaMetrics
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: nikimanoledaki
+            name: Niki Manoledaki
+            company: Grafana Labs
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: halcyondude
+            name: Matt Young
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: palnabarun
+            name: Nabarun Pal
+            company: Broadcom
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+      - name: liaisons
+        members:
+          - github: kfaseela
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: salaboy
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: mfahlandt
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: chadbeaudin
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: jeremyrickard
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+  - id: tag-operational-resilience-green-reviews
+    name: "TAG Operational Resilience: Green Reviews"
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-operational-resilience/subprojects/green-reviews"
+    teams:
+      - name: leads
+        members:
+          - github: nikimanoledaki
+            name: Niki Manoledaki
+            company: Grafana Labs
+            elected_by: TAG Operational Resilience
+            start: 2026-04-02
+            end: 2027-04-02
+          - github: AntonioDiTuri
+            name: Antonio Di Turi
+            company: Data Reply DE
+            elected_by: TAG Operational Resilience
+            start: 2026-04-02
+            end: 2027-04-02
+  - id: tag-security-and-compliance
+    name: TAG Security and Compliance
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-security-and-compliance"
+    teams:
+      - name: chairs
+        github_teams: [tag-security-compliance-chairs, tag-security-compliance-leads, cncf-tag-leads]
+        members:
+          - github: evankanderson
+            name: Evan Anderson
+            company: Custcodian
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: jkjell
+            name: John Kjell
+            company: Control-Plane.io
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: mnm678
+            name: Marina Moore
+            company: Edera
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-security-compliance-tech-leads, tag-security-compliance-leads, cncf-tag-leads]
+        members:
+          - github: arewm
+            name: Andrew McNamara
+            company: Red Hat
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: JustinCappos
+            name: Justin Cappos
+            company: New York University
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: zigmax
+            name: Maxime Coquerel
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: sherine-k
+            name: Sherine Khoury
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: realshuting
+            name: Shuting Zhao
+            company: Nirmata
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: y-tabata
+            name: Yoshiyuki Tabata
+            company: Hitachi
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+      - name: liaisons
+        members:
+          - github: angellk
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: mfahlandt
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+  - id: tag-security-and-compliance-security-assessments
+    name: "TAG Security and Compliance: Security Assessments"
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-security-and-compliance/subprojects/security-assessments"
+    teams:
+      - name: leads
+        members:
+          - github: JustinCappos
+            name: Justin Cappos
+            company: New York University
+            elected_by: TAG Security and Compliance
+            start: 2026-04-02
+            end: 2027-04-02
+          - github: eddie-knight
+            name: Eddie Knight
+            company: Sonatype
+            elected_by: TAG Security and Compliance
+            start: 2026-04-02
+            end: 2027-04-02
+  - id: tag-workloads-foundation
+    name: TAG Workloads Foundation
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-workloads-foundation"
+    teams:
+      - name: chairs
+        github_teams: [tag-workloads-foundation-chairs, tag-workloads-foundation-leads, cncf-tag-leads]
+        members:
+          - github: catblade
+            name: Marlow Warnicke
+            company: NVIDIA
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: pacoxu
+            name: Paco Xu
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: terrytangyuan
+            name: Yuan Tang
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-workloads-foundation-tech-leads, tag-workloads-foundation-leads, cncf-tag-leads]
+        members:
+          - github: pmady
+            name: Pavan Madduri
+            company: W.W.Grainger
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: RainbowMango
+            name: Hongcai Ren
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: kerthcet
+            name: Kante Yin
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: rajaskakodkar
+            name: Rajas Kakodkar
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: srust
+            name: Stephen Rust
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+      - name: liaisons
+        members:
+          - github: chira001
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: chadbeaudin
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: jeremyrickard
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: jrsapi
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+  - id: tag-workloads-foundation-batch
+    name: "TAG Workloads Foundation: Batch"
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-workloads-foundation/subprojects/batch"
+    teams:
+      - name: leads
+        members:
+          - github: stackedsax
+            name: Alex Scammon
+            company: G-Research and Insight Softmax Consulting
+            elected_by: TAG Workloads Foundation
+            start: 2026-04-07
+            end: 2027-04-07
+          - github: catblade
+            name: Marlow Warnicke
+            company: NVIDIA
+            elected_by: TAG Workloads Foundation
+            start: 2026-04-02
+            end: 2027-04-02
+          - github: asm582
+            name: Abhishek Malvankar
+            company: Red Hat
+            elected_by: TAG Workloads Foundation
+            start: 2026-04-07
+            end: 2027-04-07
+  - id: mentoring-subproject
+    name: Mentoring SubProject
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/toc_subprojects/mentoring-subproject"
+    teams:
+      - name: chairs
+        members:
+          - github: bupd
+            name: Prasanth Baskar
+            company: 8gears
+            elected_by: TOC
+            start: 2026-07-05
+            end: 2027-07-05
+          - github: nate-double-u
+            name: Nate Waddington
+            company: The Linux Foundation
+            elected_by: TOC
+            start: 2025-04-11
+            end: 2026-04-11
+      - name: tech-leads
+        members:
+          - github: Cali0707
+            name: Calum Murray
+            company: Red Hat
+            elected_by: TOC
+            start: 2026-07-05
+            end: 2027-07-05
+  - id: project-reviews-subproject
+    name: Project Reviews SubProject
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/toc_subprojects/project-reviews-subproject"
+    teams:
+      - name: leads
+        github_teams: [toc-project-reviews-subproject]
+        members:
+          - github: joshgav
+            elected_by: TOC
+            start: 2025-10-01
+            end: 2026-10-01
+          - github: khallai
+            elected_by: TOC
+            start: 2026-03-13
+            end: 2027-03-13
+  - id: end-user-tab
+    name: End User Technical Advisory Board
+    type: board
+    url: "https://github.com/cncf/tab"
+    teams:
+      - name: members
+        github_teams: [cncf-tab]
+        members:
+          - github: rochaporto
+            name: Ricardo Rocha
+            company: CERN
+            elected_by: End User community (at-large)
+            start: 2025-06-14
+          - github: jrsapi
+            name: Joseph Sandoval
+            company: Adobe Inc
+            elected_by: End User Silver members
+            start: 2025-06-14
+          - github: KentaTada
+            name: Kenta Tada
+            company: Toyota
+            elected_by: End User Silver members
+            start: 2025-12-09
+          - github: alolita
+            name: Alolita Sharma
+            company: Apple
+            elected_by: End User Platinum members
+            start: 2025-06-14
+          - github: ma-cvs
+            name: Michael Amundson
+            company: CVS Health
+            elected_by: End User Platinum members
+            start: 2026-09-14
+          - github: ncode
+            name: Juliano Martinez
+            company: Adyen
+            elected_by: End User Platinum members
+            start: 2026-09-14
+          - github: gnawux
+            name: Xu Wang
+            company: Ant Group
+            elected_by: End User Gold members
+            start: 2026-08-10
+          - github: ride808
+            name: Ben Somogyi
+            company: Lockheed Martin
+            elected_by: End User Silver members
+            start: 2026-10-21
+          - github: abebars
+            name: Ahmed Bebars
+            company: The New York Times
+            elected_by: End User community (at-large)
+            start: 2025-06-14
+          - github: michael-bowen-sc
+            name: Mike Bowen
+            company: Blackrock
+            elected_by: End User community (at-large)
+            start: 2025-12-09
+          - github: chadbeaudin
+            name: Chad Beaudin
+            company: Boeing
+            elected_by: TOC
+            start: 2025-06-14
+          - github: kgamanji
+            name: Katie Gamanji
+            company: Apple
+            elected_by: TOC
+            start: 2025-06-14
+      - name: chair
+        members:
+          - github: rochaporto
+            name: Ricardo Rocha
+            elected_by: End User TAB
+            start: 2026-09-14
+      - name: vice-chair
+        members:
+          - github: jrsapi
+            name: Joseph Sandoval
+            elected_by: End User TAB
+            start: 2026-09-14
+      - name: apac-chair
+        members:
+          - github: KentaTada
+            name: Kenta Tada
+            elected_by: End User TAB
+            start: 2026-09-14
+      - name: emeritus
+        emeritus: true
+        members:
+          - github: ahalem
+            name: Amr Abdelhalem
+            company: Fidelity Investments
+            elected_by: End User Gold members
+            start: 2025-06-12
+            end: 2025-09-04
+  - id: governing-board
+    name: Governing Board
+    type: board
+    url: "https://www.cncf.io/people/governing-board/"
+    teams:
+      - name: members
+        github_teams: [cncf-gb]
+        members:
+          - github: alena1108
+            name: Alena Prokharchyk
+            company: Apple
+            elected_by: unknown
+            start: 2023-01-07
+          - github: cblecker
+            name: Christoph Blecker
+            company: Red Hat
+            elected_by: Kubernetes project
+            start: 2023-01-24
+          - github: erinaboyd
+            name: Erin Boyd
+            company: NVIDIA
+            elected_by: unknown
+            start: 2026-06-08
+          - github: jagosan
+            name: Jago Macleod
+            company: Google
+            elected_by: unknown
+            start: 2026-07-30
+          - github: jimternet
+            name: Jim Beyers
+            company: CVS Health
+            elected_by: unknown
+            start: 2025-10-28
+          - github: angellk
+            name: Karena Angell
+            company: Red Hat
+            elected_by: TOC (TOC Chair seat)
+            start: 2025-03-26
+          - github: lachie83
+            name: Lachlan Evenson
+            company: Microsoft
+            elected_by: unknown
+            start: 2023-01-07
+          - github: denverdino
+            name: Li Yi
+            company: Alibaba Cloud
+            elected_by: unknown
+            start: 2023-01-07
+          - github: lizrice
+            name: Liz Rice
+            company: Isovalent
+            elected_by: Developer seat
+            start: 2026-02-03
+          - github: mkorbi
+            name: "Max Körbächer"
+            company: Liquid Reply
+            elected_by: Silver members
+            start: 2026-02-03
+          - github: maximilianbraun
+            name: Maximilian Braun
+            company: SAP
+            elected_by: unknown
+            start: 2025-11-04
+          - github: rochaporto
+            name: Ricardo Rocha
+            company: CERN
+            elected_by: End User TAB (TAB Chair seat)
+            start: 2025-03-26
+          - github: scheeles
+            name: Sebastian Scheele
+            company: Kubermatic
+            elected_by: Silver members
+            start: 2025-02-12
+          - github: gnawux
+            name: Xu Wang
+            company: Ant Group
+            elected_by: Gold members
+            start: 2026-02-03
+          - github: yuichi-nakamura
+            name: Yuichi Nakamura
+            company: Hitachi
+            elected_by: Gold members
+            start: 2025-02-12
+      - name: chair
+        members:
+          - github: cblecker
+            name: Christoph Blecker
+            elected_by: Governing Board
+            start: 2025-09-20
+      - name: vice-chair
+        members:
+          - github: lachie83
+            name: Lachlan Evenson
+            elected_by: Governing Board
+            start: 2026-03-10
+  - id: staff
+    name: CNCF Staff
+    type: staff
+    url: "https://www.cncf.io/people/staff/"
+    teams:
+      - name: staff
+        github_teams: [cncf-staff]
+        members:
+          - github: AudMonte01
+            name: Audra Montenegro
+            elected_by: CNCF
+            start: 2025-06-23
+          - github: caniszczyk
+            name: Chris Aniszczyk
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: castrojo
+            name: Jorge O. Castro
+            elected_by: CNCF
+            start: 2023-06-12
+          - github: catinahat85
+            elected_by: CNCF
+            start: 2026-06-08
+          - github: cjyabraham
+            name: Chris Abraham
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: DPalilonis
+            name: David Palilonis
+            elected_by: CNCF
+            start: 2023-05-22
+          - github: FedericaLinux
+            elected_by: CNCF
+            start: 2026-06-10
+          - github: hspease99
+            name: Helena Spease
+            elected_by: CNCF
+            start: 2026-04-15
+          - github: huats
+            name: Christophe Sauthier
+            elected_by: CNCF
+            start: 2023-04-11
+          - github: idvoretskyi
+            name: Ihor Dvoretskyi
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: jeefy
+            name: Jeffrey Sica
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: joannalee333
+            name: Joanna Lee
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: jroylejones-CNCF
+            name: Jennifer Royle-Jones
+            elected_by: CNCF
+            start: 2026-08-24
+          - github: krook
+            name: Daniel Krook
+            elected_by: CNCF
+            start: 2023-07-11
+          - github: lukaszgryglicki
+            name: Lukasz Gryglicki
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: mrbobbytables
+            name: Bob Killen
+            elected_by: CNCF
+            start: 2024-06-18
+          - github: mtspontejos
+            name: Mars Pontejos
+            elected_by: CNCF
+            start: 2026-08-05
+          - github: nate-double-u
+            name: Nate Waddington
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: Razel0915
+            name: Razel Armada
+            elected_by: CNCF
+            start: 2026-08-05
+          - github: riaankleinhans
+            name: Riaan Kleinhans
+            elected_by: CNCF
+            start: 2026-03-22
+          - github: RobertKielty
+            name: Robert Kielty
+            elected_by: CNCF
+            start: 2026-04-15
+          - github: taylorwaggoner
+            name: Taylor Waggoner
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: thisisobate
+            name: Uchechukwu Obasi
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: TryEleanor
+            name: Eleanor Lee
+            elected_by: CNCF
+            start: 2026-04-27
