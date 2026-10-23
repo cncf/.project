@@ -30,6 +30,4 @@ jobs:
           fetch-depth: 0
 
       # Checks every new member handle and URL by default (404 fails).
-      # TODO: re-pin to the merge commit once cncf/automation#775 is merged;
-      # this SHA is the PR head.
-      - uses: cncf/automation/.github/actions/validate-committees@c00fcac74be6dcbce355e1af634ded744cd80a7d # cncf/automation#775
+      - uses: cncf/automation/.github/actions/validate-committees@a6fe96ca86fd59081be9a1efc202d79445c519c5
