@@ -30,4 +30,4 @@ jobs:
           fetch-depth: 0
 
       # Checks every new member handle and URL by default (404 fails).
-      - uses: cncf/automation/.github/actions/validate-committees@a6fe96ca86fd59081be9a1efc202d79445c519c5
+      - uses: cncf/automation/.github/actions/validate-committees@76f19f1d237182e0d3df7cf5fb0833828c3189aa # cncf/automation#779
