@@ -54,35 +54,43 @@ committees:
         github_teams: [cncf-toc, cncf-toc-voters]
         members:
           - github: abebars
+            liaison: [tag-developer-experience]
             elected_by: End User TAB
             start: 2026-05-12
             end: 2028-05-12
           - github: chira001
+            liaison: [tag-infrastructure, tag-workloads-foundation]
             elected_by: TOC
             start: 2025-03-04
             end: 2027-03-04
           - github: brandtkeller
+            liaison: [tag-infrastructure]
             elected_by: TOC
             start: 2026-05-12
             end: 2028-05-12
           - github: chadbeaudin
+            liaison: [tag-operational-resilience, tag-workloads-foundation]
             elected_by: End User TAB
             start: 2025-03-04
             end: 2027-03-04
           - github: kfaseela
+            liaison: [tag-infrastructure, tag-operational-resilience]
             elected_by: Governing Board
             start: 2025-03-04
             end: 2027-03-04
           - github: jeremyrickard
+            liaison: [tag-operational-resilience, tag-workloads-foundation]
             elected_by: Governing Board
             start: 2025-03-04
             end: 2027-03-04
           - github: jrsapi
+            liaison: [tag-developer-experience, tag-workloads-foundation]
             elected_by: Governing Board
             start: 2026-05-12
             end: 2028-05-12
           - github: angellk
             role: chair
+            liaison: [tag-security-and-compliance]
             elected_by: Governing Board
             start: 2025-03-04
             end: 2027-03-04
@@ -92,10 +100,12 @@ committees:
             start: 2026-05-12
             end: 2028-05-12
           - github: mfahlandt
+            liaison: [tag-operational-resilience, tag-security-and-compliance]
             elected_by: Governing Board
             start: 2026-05-12
             end: 2028-05-12
           - github: salaboy
+            liaison: [tag-developer-experience, tag-operational-resilience]
             elected_by: Non-sandbox project maintainers
             start: 2026-05-12
             end: 2028-05-12
@@ -260,20 +270,6 @@ committees:
             elected_by: TOC
             start: 2026-07-07
             end: 2028-07-06
-      - name: liaisons
-        members:
-          - github: salaboy
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
-          - github: abebars
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
-          - github: jrsapi
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
   - id: tag-infrastructure
     name: TAG Infrastructure
     type: tag
@@ -321,20 +317,6 @@ committees:
             elected_by: TOC
             start: 2025-07-02
             end: 2027-06-30
-      - name: liaisons
-        members:
-          - github: brandtkeller
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
-          - github: kfaseela
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
-          - github: chira001
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
   - id: tag-operational-resilience
     name: TAG Operational Resilience
     type: tag
@@ -378,28 +360,6 @@ committees:
             elected_by: TOC
             start: 2025-07-02
             end: 2027-06-30
-      - name: liaisons
-        members:
-          - github: kfaseela
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
-          - github: salaboy
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
-          - github: mfahlandt
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
-          - github: chadbeaudin
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
-          - github: jeremyrickard
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
   - id: tag-operational-resilience-green-reviews
     name: "TAG Operational Resilience: Green Reviews"
     type: subproject
@@ -462,16 +422,6 @@ committees:
             elected_by: TOC
             start: 2026-07-07
             end: 2028-07-06
-      - name: liaisons
-        members:
-          - github: angellk
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
-          - github: mfahlandt
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
   - id: tag-security-and-compliance-security-assessments
     name: "TAG Security and Compliance: Security Assessments"
     type: subproject
@@ -530,24 +480,6 @@ committees:
             elected_by: TOC
             start: 2026-07-07
             end: 2028-07-06
-      - name: liaisons
-        members:
-          - github: chira001
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
-          - github: chadbeaudin
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
-          - github: jeremyrickard
-            elected_by: TOC
-            start: 2025-03-04
-            end: 2027-03-04
-          - github: jrsapi
-            elected_by: TOC
-            start: 2026-05-12
-            end: 2028-05-12
   - id: tag-workloads-foundation-batch
     name: "TAG Workloads Foundation: Batch"
     type: subproject
