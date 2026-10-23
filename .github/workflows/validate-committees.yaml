@@ -1,0 +1,33 @@
+# Validates committees.yaml on every pull request and push to main.
+#
+# Documentation: https://github.com/cncf/automation/blob/main/utilities/dot-project/COMMITTEES.md
+
+name: Validate Committees
+
+on:
+  pull_request:
+    paths:
+      - 'committees.yaml'
+      - '.github/workflows/validate-committees.yaml'
+  push:
+    branches: [main]
+    paths:
+      - 'committees.yaml'
+      - '.github/workflows/validate-committees.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-committees:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          # Lets the action check only the handles a change adds.
+          fetch-depth: 0
+
+      # Checks every new member handle and URL by default (404 fails).
+      - uses: cncf/automation/.github/actions/validate-committees@76f19f1d237182e0d3df7cf5fb0833828c3189aa # cncf/automation#779

@@ -1,0 +1,711 @@
+# CNCF org-level committees: governance bodies, their role teams and members.
+# Schema: https://github.com/cncf/automation/blob/main/utilities/dot-project/SCHEMA.md#committeesyaml
+#
+# TODO: review and verify the following.
+#
+# 1. elected_by is "unknown" for 33 entries:
+#    - toc/emeritus: 26
+#    - governing-board/members: 7
+#
+# 2. 16 handles were inferred from names (no source lists the handle).
+#    Confirm each is the right person:
+#    - toc/emeritus:
+#      - quinton-hoole
+#      - jbeda
+#      - mattklein123
+#      - xiang90
+#      - michelleN
+#      - saad-ali
+#      - sheng-liang
+#      - richih
+#      - klueska
+#    - end-user-tab:
+#      - ride808
+#    - governing-board:
+#      - denverdino
+#    - staff:
+#      - caniszczyk
+#      - DPalilonis
+#      - jroylejones-CNCF
+#      - mtspontejos
+#      - Razel0915
+#
+# 3. ~100 start/end dates are approximate. Where no date was recorded, the
+#    first appearance in the source's git history or the term length was used.
+#
+# 4. 50 people were left out because no GitHub handle was found:
+#    - TOC emeritus: 14
+#    - Governing Board members: 12
+#    - Staff: 24
+#
+# 5. These terms have already ended (the validator warns about them). Update
+#    the end date or move the member to an emeritus team:
+#    - mentoring-subproject/chairs: nate-double-u
+schema_version: "1.0.0"
+org: cncf
+committees:
+  - id: toc
+    name: Technical Oversight Committee
+    description: "Technical governing body of the CNCF; admits and oversees CNCF projects."
+    type: toc
+    url: "https://github.com/cncf/toc"
+    teams:
+      - name: members
+        github_teams: [cncf-toc, cncf-toc-voters]
+        members:
+          - github: abebars
+            liaison: [tag-developer-experience]
+            elected_by: End User TAB
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: chira001
+            liaison: [tag-infrastructure, tag-workloads-foundation]
+            elected_by: TOC
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: brandtkeller
+            liaison: [tag-infrastructure]
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: chadbeaudin
+            liaison: [tag-operational-resilience, tag-workloads-foundation]
+            elected_by: End User TAB
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: kfaseela
+            liaison: [tag-infrastructure, tag-operational-resilience]
+            elected_by: Governing Board
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: jeremyrickard
+            liaison: [tag-operational-resilience, tag-workloads-foundation]
+            elected_by: Governing Board
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: jrsapi
+            liaison: [tag-developer-experience, tag-workloads-foundation]
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: angellk
+            role: chair
+            liaison: [tag-security-and-compliance]
+            elected_by: Governing Board
+            start: 2025-03-04
+            end: 2027-03-04
+          - github: kevin-wangzefeng
+            role: vice-chair
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: mfahlandt
+            liaison: [tag-operational-resilience, tag-security-and-compliance]
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2028-05-12
+          - github: salaboy
+            liaison: [tag-developer-experience, tag-operational-resilience]
+            elected_by: Non-sandbox project maintainers
+            start: 2026-05-12
+            end: 2028-05-12
+      - name: alternates
+        github_teams: [cncf-toc]
+        members:
+          - github: kgamanji
+            elected_by: Governing Board
+            start: 2026-05-12
+            end: 2027-05-12
+          - github: raravena80
+            elected_by: TOC
+            start: 2026-05-12
+            end: 2027-05-12
+      - name: emeritus
+        emeritus: true
+        members:
+          - github: quinton-hoole
+            elected_by: unknown
+            start: 2018-03-17
+            end: 2019-03-17
+          - github: jbeda
+            elected_by: unknown
+            start: 2019-01-29
+            end: 2020-01-29
+          - github: kgamanji
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2020-11-02
+          - github: kgamanji
+            elected_by: unknown
+            start: 2022-03-18
+            end: 2026-02-04
+          - github: mattklein123
+            elected_by: unknown
+            start: 2019-01-29
+            end: 2021-01-29
+          - github: xiang90
+            elected_by: unknown
+            start: 2019-01-29
+            end: 2021-01-29
+          - github: michelleN
+            elected_by: unknown
+            start: 2019-03-18
+            end: 2021-03-18
+          - github: lizrice
+            elected_by: unknown
+            start: 2019-03-11
+            end: 2022-02-04
+          - github: saad-ali
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2022-02-04
+          - github: sheng-liang
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2022-02-04
+          - github: alena1108
+            elected_by: unknown
+            start: 2020-03-18
+            end: 2022-03-18
+          - github: erinaboyd
+            elected_by: unknown
+            start: 2021-02-01
+            end: 2023-02-01
+          - github: dims
+            elected_by: unknown
+            start: 2021-03-17
+            end: 2023-03-17
+          - github: dims
+            elected_by: unknown
+            start: 2024-02-16
+            end: 2026-05-12
+          - github: justincormack
+            elected_by: unknown
+            start: 2020-02-04
+            end: 2024-02-04
+          - github: mattfarina
+            elected_by: unknown
+            start: 2022-02-04
+            end: 2024-02-04
+          - github: richih
+            elected_by: unknown
+            start: 2022-02-04
+            end: 2024-02-04
+          - github: erinaboyd
+            elected_by: unknown
+            start: 2023-03-18
+            end: 2024-05-01
+          - github: nikhita
+            elected_by: unknown
+            start: 2023-02-01
+            end: 2025-02-01
+          - github: dzolotusky
+            elected_by: unknown
+            start: 2021-02-01
+            end: 2025-02-01
+          - github: cathyhongzhang
+            elected_by: unknown
+            start: 2022-07-01
+            end: 2025-02-01
+          - github: mauilion
+            elected_by: unknown
+            start: 2023-02-01
+            end: 2025-02-01
+          - github: TheFoxAtWork
+            elected_by: unknown
+            start: 2022-02-04
+            end: 2026-05-12
+          - github: klueska
+            elected_by: unknown
+            start: 2025-03-04
+            end: 2026-09-09
+          - github: linsun
+            elected_by: unknown
+            start: 2024-02-04
+            end: 2026-02-04
+          - github: rochaporto
+            elected_by: unknown
+            start: 2024-02-04
+            end: 2026-02-04
+  - id: tag-developer-experience
+    name: TAG Developer Experience
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-developer-experience"
+    teams:
+      - name: chairs
+        github_teams: [tag-developer-experience-chairs, tag-developer-experience-leads, cncf-tag-leads]
+        members:
+          - github: danieloh30
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: graz-dev
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: SwEngin
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-developer-experience-tech-leads, tag-developer-experience-leads, cncf-tag-leads]
+        members:
+          - github: joshuabezaleel
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: julsemaan
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: kdubois
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: cloudmelon
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: stmcginnis
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+  - id: tag-infrastructure
+    name: TAG Infrastructure
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-infrastructure"
+    teams:
+      - name: chairs
+        github_teams: [tag-infrastructure-chairs, tag-infrastructure-leads, cncf-tag-leads]
+        members:
+          - github: GenPage
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: kashifest
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: xing-yang
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+      - name: tech-leads
+        github_teams: [tag-infrastructure-tech-leads, tag-infrastructure-leads, cncf-tag-leads]
+        members:
+          - github: alexagriffith
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: aojea
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: joshgav
+            elected_by: TOC
+            start: 2026-09-23
+            end: 2028-07-06
+          - github: moezdil
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: thschue
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: hzxuzhonghu
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+  - id: tag-operational-resilience
+    name: TAG Operational Resilience
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-operational-resilience"
+    teams:
+      - name: chairs
+        github_teams: [tag-operational-resilience-chairs, tag-operational-resilience-leads, cncf-tag-leads]
+        members:
+          - github: alolita
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: krol3
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: saiyam1814
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-operational-resilience-tech-leads, tag-operational-resilience-leads, cncf-tag-leads]
+        members:
+          - github: chadmcrowell
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: didiViking
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: nikimanoledaki
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: halcyondude
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: palnabarun
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+  - id: tag-operational-resilience-green-reviews
+    name: "TAG Operational Resilience: Green Reviews"
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-operational-resilience/subprojects/green-reviews"
+    teams:
+      - name: leads
+        members:
+          - github: nikimanoledaki
+            elected_by: TAG Operational Resilience
+            start: 2026-04-02
+            end: 2027-04-02
+          - github: AntonioDiTuri
+            elected_by: TAG Operational Resilience
+            start: 2026-04-02
+            end: 2027-04-02
+  - id: tag-security-and-compliance
+    name: TAG Security and Compliance
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-security-and-compliance"
+    teams:
+      - name: chairs
+        github_teams: [tag-security-compliance-chairs, tag-security-compliance-leads, cncf-tag-leads]
+        members:
+          - github: evankanderson
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: jkjell
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: mnm678
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-security-compliance-tech-leads, tag-security-compliance-leads, cncf-tag-leads]
+        members:
+          - github: arewm
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: JustinCappos
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: zigmax
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: sherine-k
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: realshuting
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: y-tabata
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+  - id: tag-security-and-compliance-security-assessments
+    name: "TAG Security and Compliance: Security Assessments"
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-security-and-compliance/subprojects/security-assessments"
+    teams:
+      - name: leads
+        members:
+          - github: JustinCappos
+            elected_by: TAG Security and Compliance
+            start: 2026-04-02
+            end: 2027-04-02
+          - github: eddie-knight
+            elected_by: TAG Security and Compliance
+            start: 2026-04-02
+            end: 2027-04-02
+  - id: tag-workloads-foundation
+    name: TAG Workloads Foundation
+    type: tag
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-workloads-foundation"
+    teams:
+      - name: chairs
+        github_teams: [tag-workloads-foundation-chairs, tag-workloads-foundation-leads, cncf-tag-leads]
+        members:
+          - github: catblade
+            elected_by: TOC
+            start: 2026-06-09
+            end: 2028-06-30
+          - github: pacoxu
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+          - github: terrytangyuan
+            elected_by: TOC
+            start: 2025-07-01
+            end: 2027-06-30
+      - name: tech-leads
+        github_teams: [tag-workloads-foundation-tech-leads, tag-workloads-foundation-leads, cncf-tag-leads]
+        members:
+          - github: pmady
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+          - github: RainbowMango
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: kerthcet
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: rajaskakodkar
+            elected_by: TOC
+            start: 2025-07-02
+            end: 2027-06-30
+          - github: srust
+            elected_by: TOC
+            start: 2026-07-07
+            end: 2028-07-06
+  - id: tag-workloads-foundation-batch
+    name: "TAG Workloads Foundation: Batch"
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/tags/tag-workloads-foundation/subprojects/batch"
+    teams:
+      - name: leads
+        members:
+          - github: stackedsax
+            elected_by: TAG Workloads Foundation
+            start: 2026-04-07
+            end: 2027-04-07
+          - github: catblade
+            elected_by: TAG Workloads Foundation
+            start: 2026-04-02
+            end: 2027-04-02
+          - github: asm582
+            elected_by: TAG Workloads Foundation
+            start: 2026-04-07
+            end: 2027-04-07
+  - id: mentoring-subproject
+    name: Mentoring SubProject
+    type: subproject
+    url: "https://github.com/cncf/toc/tree/main/toc_subprojects/mentoring-subproject"
+    teams:
+      - name: chairs
+        members:
+          - github: bupd
+            elected_by: TOC
+            start: 2026-07-05
+            end: 2027-07-05
+          - github: nate-double-u
+            elected_by: TOC
+            start: 2025-04-11
+            end: 2026-04-11
+      - name: tech-leads
+        members:
+          - github: Cali0707
+            elected_by: TOC
+            start: 2026-07-05
+            end: 2027-07-05
+  - id: end-user-tab
+    name: End User Technical Advisory Board
+    type: board
+    url: "https://github.com/cncf/tab"
+    teams:
+      - name: members
+        github_teams: [cncf-tab]
+        members:
+          - github: rochaporto
+            role: chair
+            elected_by: End User community (at-large)
+            start: 2025-06-14
+          - github: jrsapi
+            role: vice-chair
+            elected_by: End User Silver members
+            start: 2025-06-14
+          - github: KentaTada
+            role: apac-chair
+            elected_by: End User Silver members
+            start: 2025-12-09
+          - github: alolita
+            elected_by: End User Platinum members
+            start: 2025-06-14
+          - github: ma-cvs
+            elected_by: End User Platinum members
+            start: 2026-09-14
+          - github: ncode
+            elected_by: End User Platinum members
+            start: 2026-09-14
+          - github: gnawux
+            elected_by: End User Gold members
+            start: 2026-08-10
+          - github: ride808
+            elected_by: End User Silver members
+            start: 2026-10-21
+          - github: abebars
+            elected_by: End User community (at-large)
+            start: 2025-06-14
+          - github: michael-bowen-sc
+            elected_by: End User community (at-large)
+            start: 2025-12-09
+          - github: chadbeaudin
+            elected_by: TOC
+            start: 2025-06-14
+          - github: kgamanji
+            elected_by: TOC
+            start: 2025-06-14
+      - name: emeritus
+        emeritus: true
+        members:
+          - github: ahalem
+            elected_by: End User Gold members
+            start: 2025-06-12
+            end: 2025-09-04
+  - id: governing-board
+    name: Governing Board
+    type: board
+    url: "https://www.cncf.io/people/governing-board/"
+    teams:
+      - name: members
+        github_teams: [cncf-gb]
+        members:
+          - github: alena1108
+            elected_by: unknown
+            start: 2023-01-07
+          - github: cblecker
+            role: chair
+            elected_by: Kubernetes project
+            start: 2023-01-24
+          - github: erinaboyd
+            elected_by: unknown
+            start: 2026-06-08
+          - github: jagosan
+            elected_by: unknown
+            start: 2026-07-30
+          - github: jimternet
+            elected_by: unknown
+            start: 2025-10-28
+          - github: angellk
+            elected_by: TOC (TOC Chair seat)
+            start: 2025-03-26
+          - github: lachie83
+            role: vice-chair
+            elected_by: unknown
+            start: 2023-01-07
+          - github: denverdino
+            elected_by: unknown
+            start: 2023-01-07
+          - github: lizrice
+            elected_by: Developer seat
+            start: 2026-02-03
+          - github: mkorbi
+            elected_by: Silver members
+            start: 2026-02-03
+          - github: maximilianbraun
+            elected_by: unknown
+            start: 2025-11-04
+          - github: rochaporto
+            elected_by: End User TAB (TAB Chair seat)
+            start: 2025-03-26
+          - github: scheeles
+            elected_by: Silver members
+            start: 2025-02-12
+          - github: gnawux
+            elected_by: Gold members
+            start: 2026-02-03
+          - github: yuichi-nakamura
+            elected_by: Gold members
+            start: 2025-02-12
+  - id: staff
+    name: CNCF Staff
+    type: staff
+    url: "https://www.cncf.io/people/staff/"
+    teams:
+      - name: staff
+        github_teams: [cncf-staff]
+        members:
+          - github: AudMonte01
+            elected_by: CNCF
+            start: 2025-06-23
+          - github: caniszczyk
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: castrojo
+            elected_by: CNCF
+            start: 2023-06-12
+          - github: catinahat85
+            elected_by: CNCF
+            start: 2026-06-08
+          - github: cjyabraham
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: DPalilonis
+            elected_by: CNCF
+            start: 2023-05-22
+          - github: FedericaLinux
+            elected_by: CNCF
+            start: 2026-06-10
+          - github: hspease99
+            elected_by: CNCF
+            start: 2026-04-15
+          - github: huats
+            elected_by: CNCF
+            start: 2023-04-11
+          - github: idvoretskyi
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: jeefy
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: joannalee333
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: jroylejones-CNCF
+            elected_by: CNCF
+            start: 2026-08-24
+          - github: krook
+            elected_by: CNCF
+            start: 2023-07-11
+          - github: lukaszgryglicki
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: mrbobbytables
+            elected_by: CNCF
+            start: 2024-06-18
+          - github: mtspontejos
+            elected_by: CNCF
+            start: 2026-08-05
+          - github: nate-double-u
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: Razel0915
+            elected_by: CNCF
+            start: 2026-08-05
+          - github: riaankleinhans
+            elected_by: CNCF
+            start: 2026-03-22
+          - github: RobertKielty
+            elected_by: CNCF
+            start: 2026-04-15
+          - github: taylorwaggoner
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: thisisobate
+            elected_by: CNCF
+            start: 2023-01-07
+          - github: TryEleanor
+            elected_by: CNCF
+            start: 2026-04-27
